@@ -3,13 +3,13 @@
     id="appDrawer"
     :mini-variant.sync="mini"
     fixed
-    :dark="$vuetify.dark"
+    :dark="true"
     app
     v-model="drawer"
     width="260"
   >
     <v-toolbar color="primary darken-1" dark>
-      <img src="../static/m.png" height="36" alt="Vue Material Admin Template">
+      <img src="../static/terminal.png" height="36" alt="Vue Material Admin Template">
       <v-toolbar-title class="ml-0 pl-3">
         <span class="hidden-sm-and-down">obaTerm</span>
       </v-toolbar-title>

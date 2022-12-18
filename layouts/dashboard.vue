@@ -13,37 +13,11 @@
         </v-content>
         <!-- Go to top -->
         <app-fab></app-fab>
-        <!-- theme setting -->
-        <v-btn small fab dark falt fixed top="top" right="right" class="setting-fab" color="red"
-               @click="openThemeSettings">
-          <v-icon>settings</v-icon>
-        </v-btn>
-        <v-navigation-drawer
-          class="setting-drawer"
-          temporary
-          right
-          v-model="rightDrawer"
-          hide-overlay
-          fixed
-        >
-          <theme-settings></theme-settings>
-        </v-navigation-drawer>
       </v-app>
     </template>
 
 
-    <v-snackbar
-      :timeout="3000"
-      bottom
-      right
-      :color="snackbar.color"
-      v-model="snackbar.show"
-    >
-      {{ snackbar.text }}
-      <v-btn dark flat @click.native="snackbar.show = false" icon>
-        <v-icon>close</v-icon>
-      </v-btn>
-    </v-snackbar>
+   
   </div>
 </template>
 
@@ -76,6 +50,7 @@
       openThemeSettings() {
         this.$vuetify.goTo(0)
         this.rightDrawer = (!this.rightDrawer)
+        
       }
     }
   }
